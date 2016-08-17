@@ -11800,7 +11800,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries</span>
@@ -11852,7 +11852,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Calculate number of students</span>
@@ -11915,7 +11915,7 @@ Graduation rate of the class: 67.09%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Extract feature columns</span>
@@ -11997,7 +11997,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -12068,7 +12068,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import any additional functionality you may need here</span>
@@ -12212,7 +12212,7 @@ Also, the model cannot be interpreted [5]</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12285,7 +12285,7 @@ Also, the model cannot be interpreted [5]</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -12295,9 +12295,9 @@ Also, the model cannot be interpreted [5]</li>
 
 
 <span class="c1"># TODO: Initialize the three models</span>
-<span class="n">clf_A</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">clf_A</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
 <span class="n">clf_B</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">()</span>
-<span class="n">clf_C</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">()</span>
+<span class="n">clf_C</span> <span class="o">=</span> <span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
 
 <span class="c1"># TODO: Set up the training set sizes</span>
 <span class="n">X_train_100</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span>
@@ -12330,56 +12330,56 @@ Also, the model cannot be interpreted [5]</li>
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training a DecisionTreeClassifier using a training set size of 100. . .
-Trained model in 0.0011 seconds
+Trained model in 0.0010 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0002 seconds.
-F1 score for test set: 0.6250.
+F1 score for test set: 0.6552.
 Training a KNeighborsClassifier using a training set size of 100. . .
 Trained model in 0.0006 seconds
-Made predictions in 0.0012 seconds.
+Made predictions in 0.0015 seconds.
 F1 score for training set: 0.8060.
-Made predictions in 0.0012 seconds.
+Made predictions in 0.0013 seconds.
 F1 score for test set: 0.7246.
 Training a AdaBoostClassifier using a training set size of 100. . .
-Trained model in 0.0752 seconds
-Made predictions in 0.0044 seconds.
+Trained model in 0.0741 seconds
+Made predictions in 0.0046 seconds.
 F1 score for training set: 0.9481.
-Made predictions in 0.0043 seconds.
+Made predictions in 0.0044 seconds.
 F1 score for test set: 0.7669.
 Training a DecisionTreeClassifier using a training set size of 200. . .
-Trained model in 0.0015 seconds
+Trained model in 0.0014 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0002 seconds.
-F1 score for test set: 0.7287.
+F1 score for test set: 0.7500.
 Training a KNeighborsClassifier using a training set size of 200. . .
-Trained model in 0.0007 seconds
-Made predictions in 0.0030 seconds.
+Trained model in 0.0006 seconds
+Made predictions in 0.0031 seconds.
 F1 score for training set: 0.8800.
 Made predictions in 0.0017 seconds.
 F1 score for test set: 0.7692.
 Training a AdaBoostClassifier using a training set size of 200. . .
-Trained model in 0.0806 seconds
-Made predictions in 0.0053 seconds.
+Trained model in 0.0789 seconds
+Made predictions in 0.0054 seconds.
 F1 score for training set: 0.8927.
-Made predictions in 0.0044 seconds.
+Made predictions in 0.0043 seconds.
 F1 score for test set: 0.8281.
 Training a DecisionTreeClassifier using a training set size of 300. . .
 Trained model in 0.0020 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 1.0000.
-Made predictions in 0.0002 seconds.
-F1 score for test set: 0.6769.
+Made predictions in 0.0001 seconds.
+F1 score for test set: 0.6613.
 Training a KNeighborsClassifier using a training set size of 300. . .
 Trained model in 0.0008 seconds
 Made predictions in 0.0082 seconds.
 F1 score for training set: 0.8809.
-Made predictions in 0.0025 seconds.
+Made predictions in 0.0023 seconds.
 F1 score for test set: 0.7801.
 Training a AdaBoostClassifier using a training set size of 300. . .
-Trained model in 0.0853 seconds
-Made predictions in 0.0063 seconds.
+Trained model in 0.0851 seconds
+Made predictions in 0.0062 seconds.
 F1 score for training set: 0.8637.
 Made predictions in 0.0045 seconds.
 F1 score for test set: 0.7820.
@@ -12419,24 +12419,24 @@ F1 score for test set: 0.7820.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0011</td>
+<td style="text-align:center">0.0010</td>
 <td style="text-align:center">0.0002</td>
 <td style="text-align:center">1.00</td>
-<td style="text-align:center">0.6250</td>
+<td style="text-align:center">0.6552</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0015</td>
+<td style="text-align:center">0.0014</td>
 <td style="text-align:center">0.0002</td>
 <td style="text-align:center">1.00</td>
-<td style="text-align:center">0.7287</td>
+<td style="text-align:center">0.7500</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
 <td style="text-align:center">0.0020</td>
-<td style="text-align:center">0.0002</td>
+<td style="text-align:center">0.0001</td>
 <td style="text-align:center">1.00</td>
-<td style="text-align:center">0.6769</td>
+<td style="text-align:center">0.6613</td>
 </tr>
 </tbody>
 </table>
@@ -12454,13 +12454,13 @@ F1 score for test set: 0.7820.
 <tr>
 <td style="text-align:center">100</td>
 <td style="text-align:center">0.0006</td>
-<td style="text-align:center">0.0012</td>
+<td style="text-align:center">0.0013</td>
 <td style="text-align:center">0.8060</td>
 <td style="text-align:center">0.7246</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0007</td>
+<td style="text-align:center">0.0006</td>
 <td style="text-align:center">0.0017</td>
 <td style="text-align:center">0.8800</td>
 <td style="text-align:center">0.7692</td>
@@ -12468,7 +12468,7 @@ F1 score for test set: 0.7820.
 <tr>
 <td style="text-align:center">300</td>
 <td style="text-align:center">0.0008</td>
-<td style="text-align:center">0.0025</td>
+<td style="text-align:center">0.0023</td>
 <td style="text-align:center">0.8809</td>
 <td style="text-align:center">0.7801</td>
 </tr>
@@ -12487,21 +12487,21 @@ F1 score for test set: 0.7820.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0806</td>
+<td style="text-align:center">0.0741</td>
 <td style="text-align:center">0.0044</td>
+<td style="text-align:center">0.9481</td>
+<td style="text-align:center">0.7669</td>
+</tr>
+<tr>
+<td style="text-align:center">200</td>
+<td style="text-align:center">0.0789</td>
+<td style="text-align:center">0.0043</td>
 <td style="text-align:center">0.8927</td>
 <td style="text-align:center">0.8281</td>
 </tr>
 <tr>
-<td style="text-align:center">200</td>
-<td style="text-align:center">0.1970</td>
-<td style="text-align:center">0.0131</td>
-<td style="text-align:center">0.8921</td>
-<td style="text-align:center">0.8065</td>
-</tr>
-<tr>
 <td style="text-align:center">300</td>
-<td style="text-align:center">0.0853</td>
+<td style="text-align:center">0.0851</td>
 <td style="text-align:center">0.0045</td>
 <td style="text-align:center">0.8637</td>
 <td style="text-align:center">0.7820</td>
@@ -12537,7 +12537,7 @@ F1 score for test set: 0.7820.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> The best performing model was AdaBoost. Compared to the decision tree and k-nearest neighbors algorithm, the AdaBoost algorithm had the best F1 score on the test data set on all training sizes. Although its training time and predicition time is lower compared to the other classifiers, the difference is inconsequential. At the largest training set the difference in training time between Adaboost and the fastest classifier time is 0.0845 sec. The difference in prediction times between Adaboost and the fastest classifier time is 0.0043 sec.</p>
+<p><strong>Answer: </strong> The best performing model was AdaBoost. Compared to the decision tree and k-nearest neighbors algorithm, the AdaBoost algorithm had the best F1 score on the test data set on all training sizes. Although its training time and predicition time is lower compared to the other classifiers, the difference is inconsequential. At the largest training set the difference in training time between Adaboost and the fastest classifier time is 0.0843 sec. The difference in prediction times between Adaboost and the fastest classifier time is 0.0044 sec.</p>
 <p>Given the increased prediction accuracy and inconsequential difference in training time, my recommendation would be to use the AdaBoost classifier in predicting if a student will graduate.</p>
 
 </div>
